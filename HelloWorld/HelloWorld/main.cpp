@@ -7,6 +7,7 @@
 //
 
 #include <iostream>
+#include "main.h"
 using namespace std;
 
 pair<bitset<1>, bitset<1>> simulatedFullAdder(bitset<1> a, bitset<1> b, bitset<1> carryin){
@@ -22,7 +23,7 @@ pair<bitset<1>, bitset<1>> simulatedFullAdder(bitset<1> a, bitset<1> b, bitset<1
     return outpair;
 }
 
-string binaryAdder(string a, string b, bool addExtraBits = false){
+string binaryAdder(string a, string b, bool addExtraBits){
     
     //Reverse our strings, because we're going to do our binary math from right-to-left
     reverse(a.begin(), a.end());
@@ -39,7 +40,7 @@ string binaryAdder(string a, string b, bool addExtraBits = false){
         bitset<1> bb;
         bitset<1> out;
         
-        //Set out bits appropriately as 1 or 0
+        //Set our bits appropriately as 1 or 0
         if(a[i]=='1'){
             ba.set();
         }
