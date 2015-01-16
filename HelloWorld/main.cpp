@@ -16,6 +16,11 @@ using namespace std;
 
 int main(int argc, const char * argv[]) {
 
+    //What arguments did we get?
+    cout << argv << "\n"; //memory address of where the arguments live
+    cout << *argv << "\n"; //same as argv[0];
+    cout << argc << "\n";
+    
     //Add some integers!
     //cout << integerAdd(4,5) << "\n";
     
